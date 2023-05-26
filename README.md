@@ -1,5 +1,7 @@
 # PokemonApp
 
+This project consist on a list and a detail view of Pokemons. You can search by the name of the Pokemon in the search bar at the top. You can also sort the current list by the name of the Pokemon.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server

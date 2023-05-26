@@ -1,1 +1,30 @@
-<p>list works!</p>
+<div class="d-flex justify-content-center" *ngIf="loading; else elseBlock">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+    <div class="input-group mb-3">
+        <input [(ngModel)]="searchText" (ngModelChange)="searchOnList()" type="text" class="form-control" placeholder="Pokemon name" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+        <button (click)="searchOnList()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col" (click)="sortList()">
+                    Pokemon Name
+                    <span *ngIf="sort === 0 || sort === 1; else elseBlock">↑</span>
+                    <ng-template #elseBlock><span>↓</span></ng-template>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of filterableList">
+                <td (click)="navigateToDetail(item.name)">{{item.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <app-pagination [pagesCount]="pagination.pages" (pageChange)="changePage($event)"></app-pagination>
+</ng-template>

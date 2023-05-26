@@ -1,0 +1,14 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center flex-wrap">
+        <ng-container *ngFor="let page of numbers">
+            <li *ngIf="currentPage === page; else elseBlock" class="page-item active">
+                <span class="page-link">{{ page }}</span>
+            </li>
+            <ng-template #elseBlock>
+                <li class="page-item" (click)="changePage(page)">
+                    <a class="page-link" href="#">{{ page }}</a>
+                </li>
+            </ng-template>
+        </ng-container>
+    </ul>
+</nav>

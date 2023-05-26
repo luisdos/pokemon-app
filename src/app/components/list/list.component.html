@@ -13,7 +13,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th scope="col" (click)="sortList()">
+                <th class="clickable" scope="col" (click)="sortList()">
                     Pokemon Name
                     <span *ngIf="sort === 0 || sort === 1; else elseBlock">↑</span>
                     <ng-template #elseBlock><span>↓</span></ng-template>
@@ -21,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of filterableList">
+            <tr class="clickable" *ngFor="let item of filterableList">
                 <td (click)="navigateToDetail(item.name)">{{item.name}}</td>
             </tr>
         </tbody>

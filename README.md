@@ -1,6 +1,10 @@
 # PokemonApp
 
-This project consist on a list and a detail view of Pokemons. You can search by the name of the Pokemon in the search bar at the top. You can also sort the current list by the name of the Pokemon.
+This project consist on a list and a detail view of Pokemons. You can search by the name of the Pokemon in the search bar at the top. The search will only work for the current page. This is because the API doesn't have the endpoint to list pokemons by their name. You can also sort the current list by the name of the Pokemon. <- [This is not working properly but working on a fix]
+
+The user can click on a Pokemon from the list and it will be redirected to a detailed view where the user can see the details for the Types, Abilities and Moves of the Pokemon. A Pokemon image will be shown too.
+
+Angular documentation:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 

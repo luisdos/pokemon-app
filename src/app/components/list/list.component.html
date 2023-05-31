@@ -6,7 +6,7 @@
 
 <ng-template #elseBlock>
     <div class="input-group mb-3">
-        <input [(ngModel)]="searchText" (ngModelChange)="searchOnList()" type="text" class="form-control" placeholder="Pokemon name" aria-label="Recipient's username"
+        <input [(ngModel)]="searchText" (ngModelChange)="searchOnList()" type="text" class="form-control" placeholder="Search by Pokemon name" aria-label="pokemon-name"
             aria-describedby="button-addon2">
         <button (click)="searchOnList()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
     </div>

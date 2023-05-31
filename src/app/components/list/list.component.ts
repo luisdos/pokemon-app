@@ -63,7 +63,6 @@ export class ListComponent {
 
   sortList() {
     this.filterableList = this.list.sort((n1: any, n2: any) => {
-      debugger;
       if (n1.name < n2.name) {
         this.sort = Sort.DESC;
         return -1;
